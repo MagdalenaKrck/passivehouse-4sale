@@ -29,7 +29,7 @@ Sustainable, energy-efficient, architect-designed home near Brno and Vienna.
 
 ## 🌐 Live Website
 
-👉 [info@passivehouse4sale.com](https://passivehouse4sale.com/)
+👉 https://passivehouse4sale.com/
 
 ---
 
