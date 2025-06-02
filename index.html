@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pasivní dům na prodej</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pasivní dům v přírodě</h1>
+  </header>
+  <section class="hero-slider">
+    <div class="slider">
+      <img src="img/hero1.jpg" alt="Dům 1">
+      <img src="img/hero2.jpg" alt="Dům 2">
+      <img src="img/hero3.jpg" alt="Dům 3">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+    <div class="slider-text">
+      <h2 id="headline">Přírodní prostředí</h2>
+      <p id="subtext">Klidná lokalita s výhledem na les</p>
+    </div>
+  </section>
+  <section class="features">
+    <div class="icon" onclick="bounce(this)">
+      <img src="icons/solar.svg" alt="Solární energie">
+      <p>Solární Energie</p>
+    </div>
+    <div class="icon" onclick="bounce(this)">
+      <img src="icons/climate.svg" alt="Kontrolované klima">
+      <p>Kontrolované Klima</p>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
