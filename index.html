@@ -2,22 +2,21 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moderní Pasivní Dům</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="index.html" data-i18n="home">Domů</a></li>
-        <li><a href="about.html" data-i18n="about">O domě</a></li>
-        <li><a href="certifikace.html" data-i18n="cert">Certifikace</a></li>
-        <li><a href="zahrada.html" data-i18n="garden">Zahrada</a></li>
-        <li><a href="kontakt.html" data-i18n="contact">Kontakt</a></li>
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="about.html">O domě</a></li>
+        <li><a href="certifikace.html">Certifikace</a></li>
+        <li><a href="zahrada.html">Zahrada</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li>
-          <select id="langSwitch">
+          <select id="lang-switcher">
             <option value="cs">CZ</option>
             <option value="en">EN</option>
             <option value="de">DE</option>
@@ -25,24 +24,39 @@
         </li>
       </ul>
     </nav>
-    <h1 data-i18n="title">Moderní Pasivní Dům</h1>
-    <p data-i18n="subtitle">Energeticky efektivní bydlení v harmonii s přírodou</p>
-    <button data-i18n="cta">Zjistit více</button>
+    <div class="hero-text">
+      <h1>Moderní Pasivní Dům</h1>
+      <p class="subtitle">Energeticky efektivní bydlení v harmonii s přírodou</p>
+      <a href="#features" class="cta-button">Zjistit více</a>
+    </div>
   </header>
 
-  <section class="slider">
-    <img src="img/hero1.jpg" alt="Pohled 1" class="slide active"/>
-    <img src="img/hero2.jpg" alt="Pohled 2" class="slide"/>
-    <img src="img/hero3.jpg" alt="Pohled 3" class="slide"/>
-  </section>
+  <main>
+    <section class="slider" id="slider">
+      <img src="img/hero1.jpg" alt="Pohled 1" />
+      <img src="img/hero2.jpg" alt="Pohled 2" />
+      <img src="img/hero3.jpg" alt="Pohled 3" />
+    </section>
 
-  <section class="features">
-    <div class="feature">
-      <img src="icons/solar.svg" alt="" />
-      <h3 data-i18n="solar">Solární Energie</h3>
-      <p data-i18n="solar_desc">Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
-    </div>
-    <!-- other features can be added similarly -->
-  </section>
+    <section id="features">
+      <div class="feature-card">
+        <img src="icons/solar.svg" alt="Solární Energie" />
+        <h3>Solární Energie</h3>
+        <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icons/climate.svg" alt="Kontrolované Klima" />
+        <h3>Kontrolované Klima</h3>
+        <p>Rekuperace a řízené větrání zajišťují ideální klima.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icons/air.svg" alt="Čistý Vzduch" />
+        <h3>Čistý Vzduch</h3>
+        <p>Filtrace vzduchu zajišťuje zdravé prostředí.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
