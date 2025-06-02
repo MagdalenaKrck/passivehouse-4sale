@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -9,31 +8,27 @@
 </head>
 <body>
   <header>
-    <h1>Pasivní dům v přírodě</h1>
+    <h1>Pasivní dům na prodej</h1>
   </header>
-  <section class="hero-slider">
-    <div class="slider">
-      <img src="img/hero1.jpg" alt="Dům 1">
-      <img src="img/hero2.jpg" alt="Dům 2">
-      <img src="img/hero3.jpg" alt="Dům 3">
-    </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-    <div class="slider-text">
-      <h2 id="headline">Přírodní prostředí</h2>
-      <p id="subtext">Klidná lokalita s výhledem na les</p>
-    </div>
-  </section>
-  <section class="features">
-    <div class="icon" onclick="bounce(this)">
-      <img src="icons/solar.svg" alt="Solární energie">
-      <p>Solární Energie</p>
-    </div>
-    <div class="icon" onclick="bounce(this)">
-      <img src="icons/climate.svg" alt="Kontrolované klima">
-      <p>Kontrolované Klima</p>
-    </div>
-  </section>
-  <script src="script.js"></script>
+  <main>
+    <section id="hero">
+      <div class="slider">
+        <img src="img/hero1.jpg" alt="Dům - pohled 1" />
+        <img src="img/hero2.jpg" alt="Dům - pohled 2" />
+        <img src="img/hero3.jpg" alt="Dům - pohled 3" />
+      </div>
+    </section>
+    <section id="features">
+      <h2>Klíčové vlastnosti</h2>
+      <ul class="icons">
+        <li><strong>Solární Energie</strong><br/>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</li>
+        <li><strong>Kontrolované Klima</strong><br/>Rekuperace tepla a řízené větrání zajišťují ideální teplotu po celý rok.</li>
+        <li><strong>Čistý Vzduch</strong><br/>Systém filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</li>
+        <li><strong>Energetická Třída A+</strong><br/>Nejvyšší energetická třída s minimální spotřebou energie.</li>
+        <li><strong>Nízké Provozní Náklady</strong><br/>Úspora až 90 % nákladů na vytápění a chlazení.</li>
+        <li><strong>Smart Home</strong><br/>Inteligentní ovládání všech systémů přes mobilní aplikaci.</li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
