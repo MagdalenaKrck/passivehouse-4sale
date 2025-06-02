@@ -8,27 +8,56 @@
 </head>
 <body>
   <header>
-    <h1>Pasivní dům na prodej</h1>
-  </header>
-  <main>
-    <section id="hero">
-      <div class="slider">
-        <img src="img/hero1.jpg" alt="Dům - pohled 1" />
-        <img src="img/hero2.jpg" alt="Dům - pohled 2" />
-        <img src="img/hero3.jpg" alt="Dům - pohled 3" />
-      </div>
-    </section>
-    <section id="features">
-      <h2>Klíčové vlastnosti</h2>
-      <ul class="icons">
-        <li><strong>Solární Energie</strong><br/>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</li>
-        <li><strong>Kontrolované Klima</strong><br/>Rekuperace tepla a řízené větrání zajišťují ideální teplotu po celý rok.</li>
-        <li><strong>Čistý Vzduch</strong><br/>Systém filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</li>
-        <li><strong>Energetická Třída A+</strong><br/>Nejvyšší energetická třída s minimální spotřebou energie.</li>
-        <li><strong>Nízké Provozní Náklady</strong><br/>Úspora až 90 % nákladů na vytápění a chlazení.</li>
-        <li><strong>Smart Home</strong><br/>Inteligentní ovládání všech systémů přes mobilní aplikaci.</li>
+    <nav>
+      <ul>
+        <li><a href="#">Domů</a></li>
+        <li><a href="#">O domě</a></li>
+        <li><a href="#">Vlastnosti</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li>
+          <select id="languageSwitcher">
+            <option value="cs">CZ</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+          </select>
+        </li>
       </ul>
-    </section>
-  </main>
+    </nav>
+    <h1 id="title">Moderní Pasivní Dům</h1>
+    <p id="subtitle">Energeticky efektivní bydlení v harmonii s přírodou</p>
+    <button id="learnMore">Zjistit více</button>
+  </header>
+  <section class="slider">
+    <img src="img/hero1.jpg" alt="Pohled 1" class="slide active">
+    <img src="img/hero2.jpg" alt="Pohled 2" class="slide">
+    <img src="img/hero3.jpg" alt="Pohled 3" class="slide">
+  </section>
+  <section class="features">
+    <div class="feature">
+      <h3>Solární Energie</h3>
+      <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
+    </div>
+    <div class="feature">
+      <h3>Kontrolované Klima</h3>
+      <p>Rekuperace tepla a řízené větrání zajišťují ideální teplotu po celý rok.</p>
+    </div>
+    <div class="feature">
+      <h3>Čistý Vzduch</h3>
+      <p>Systém filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p>
+    </div>
+    <div class="feature">
+      <h3>Energetická Třída A+</h3>
+      <p>Nejvyšší energetická třída s minimální spotřebou energie.</p>
+    </div>
+    <div class="feature">
+      <h3>Nízké Provozní Náklady</h3>
+      <p>Úspora až 90 % nákladů na vytápění a chlazení.</p>
+    </div>
+    <div class="feature">
+      <h3>Smart Home</h3>
+      <p>Inteligentní ovládání všech systémů přes mobilní aplikaci.</p>
+    </div>
+  </section>
+  <script src="script.js"></script>
 </body>
 </html>

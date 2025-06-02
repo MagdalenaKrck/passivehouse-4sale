@@ -1,54 +1,30 @@
 
-// ========== Automatický slider ==========
 let currentSlide = 0;
-const slides = document.querySelectorAll('.slider img');
-const totalSlides = slides.length;
+const slides = document.querySelectorAll(".slide");
+setInterval(() => {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}, 4000);
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.display = i === index ? 'block' : 'none';
-  });
-}
+// jazykový přepínač
+document.getElementById("languageSwitcher").addEventListener("change", function() {
+  const lang = this.value;
+  const title = document.getElementById("title");
+  const subtitle = document.getElementById("subtitle");
+  const btn = document.getElementById("learnMore");
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  showSlide(currentSlide);
-}
-
-if (slides.length > 0) {
-  showSlide(currentSlide);
-  setInterval(nextSlide, 5000); // každých 5 sekund
-}
-
-// ========== Přepínač jazyků ==========
-const langButtons = document.querySelectorAll('.lang-switch button');
-
-langButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const lang = button.dataset.lang;
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-      el.textContent = translations[lang][key] || key;
-    });
-  });
-});
-
-// ========== Překlady (ukázka) ==========
-const translations = {
-  cz: {
-    title: "Pasivní dům na prodej",
-    feature1: "Solární Energie",
-    feature2: "Kontrolované Klima"
-  },
-  en: {
-    title: "Passive House for Sale",
-    feature1: "Solar Energy",
-    feature2: "Controlled Climate"
-  },
-  de: {
-    title: "Passivhaus zu verkaufen",
-    feature1: "Solarenergie",
-    feature2: "Kontrolliertes Klima"
+  if (lang === "en") {
+    title.textContent = "Modern Passive House";
+    subtitle.textContent = "Energy-efficient living in harmony with nature";
+    btn.textContent = "Learn more";
+  } else if (lang === "de") {
+    title.textContent = "Modernes Passivhaus";
+    subtitle.textContent = "Energieeffizientes Wohnen im Einklang mit der Natur";
+    btn.textContent = "Mehr erfahren";
+  } else {
+    title.textContent = "Moderní Pasivní Dům";
+    subtitle.textContent = "Energeticky efektivní bydlení v harmonii s přírodou";
+    btn.textContent = "Zjistit více";
   }
-};
+});
