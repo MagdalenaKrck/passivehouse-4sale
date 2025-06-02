@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pasivní dům na prodej</title>
+  <title>Moderní Pasivní Dům</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -23,41 +25,48 @@
         </li>
       </ul>
     </nav>
-    <h1 id="title">Moderní Pasivní Dům</h1>
-    <p id="subtitle">Energeticky efektivní bydlení v harmonii s přírodou</p>
-    <button id="learnMore">Zjistit více</button>
+    <h1 id="headline">Moderní Pasivní Dům</h1>
+    <p id="subheadline">Energeticky efektivní bydlení v harmonii s přírodou</p>
+    <button id="moreBtn">Zjistit více</button>
   </header>
+
   <section class="slider">
-    <img src="img/hero1.jpg" alt="Pohled 1" class="slide active">
-    <img src="img/hero2.jpg" alt="Pohled 2" class="slide">
-    <img src="img/hero3.jpg" alt="Pohled 3" class="slide">
+    <img src="img/hero1.jpg" alt="Pohled 1" class="active"/>
+    <img src="img/hero2.jpg" alt="Pohled 2" />
+    <img src="img/hero3.jpg" alt="Pohled 3" />
   </section>
+
   <section class="features">
     <div class="feature">
+      <img src="icons/solar.svg" alt="Solární Energie"/>
       <h3>Solární Energie</h3>
       <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
     </div>
     <div class="feature">
+      <img src="icons/climate.svg" alt="Kontrolované Klima"/>
       <h3>Kontrolované Klima</h3>
       <p>Rekuperace tepla a řízené větrání zajišťují ideální teplotu po celý rok.</p>
     </div>
     <div class="feature">
+      <img src="icons/air.svg" alt="Čistý Vzduch"/>
       <h3>Čistý Vzduch</h3>
       <p>Systém filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p>
     </div>
     <div class="feature">
+      <img src="icons/class.svg" alt="Energetická Třída A+"/>
       <h3>Energetická Třída A+</h3>
       <p>Nejvyšší energetická třída s minimální spotřebou energie.</p>
     </div>
     <div class="feature">
+      <img src="icons/cost.svg" alt="Nízké Provozní Náklady"/>
       <h3>Nízké Provozní Náklady</h3>
       <p>Úspora až 90 % nákladů na vytápění a chlazení.</p>
     </div>
     <div class="feature">
+      <img src="icons/smart.svg" alt="Smart Home"/>
       <h3>Smart Home</h3>
       <p>Inteligentní ovládání všech systémů přes mobilní aplikaci.</p>
     </div>
   </section>
-  <script src="script.js"></script>
 </body>
 </html>
