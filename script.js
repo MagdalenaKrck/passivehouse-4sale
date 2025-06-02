@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const icons = document.querySelectorAll(".icon");
-
-    icons.forEach(icon => {
-        icon.addEventListener("mouseover", () => {
-            icon.style.transform = "scale(1.2)";
-        });
-        icon.addEventListener("mouseleave", () => {
-            icon.style.transform = "scale(1)";
-        });
-    });
+  const images = document.querySelectorAll(".slider img");
+  let current = 0;
+  function showSlide(i) {
+    images.forEach(img => img.classList.remove("active"));
+    images[i].classList.add("active");
+  }
+  showSlide(current);
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    showSlide(current);
+  }, 3000);
 });
