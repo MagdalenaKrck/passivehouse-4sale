@@ -29,11 +29,11 @@ Sustainable, energy-efficient, architect-designed home near Brno and Vienna.
 
 ## 🌐 Live Website
 
-👉 [https://passive-house-ujezd.netlify.app](https://passive-house-ujezd.netlify.app)
+👉 [info@passivehouse4sale.com](https://passivehouse4sale.com/))
 
 ---
 
 ## 📩 Contact
 
 Interested in viewing or purchasing the home?  
-Contact Magdalena at: **magdalena.kreckova@gmail.com**
+Contact Magdalena at: **info@passivehouse4sale.com**
