@@ -1,37 +1,23 @@
+
 let currentIndex = 0;
-const slider = document.querySelector('.slider');
-const images = document.querySelectorAll('.slider img');
-const total = images.length;
+const slider = document.getElementById("slider");
+const slides = slider.getElementsByTagName("img");
 
-function updateSlider() {
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+function showSlide(index) {
+  const offset = -index * 100;
+  slider.style.transform = "translateX(" + offset + "%)";
 }
 
-function showNext() {
-  currentIndex = (currentIndex + 1) % total;
-  updateSlider();
-}
+document.querySelector(".prev").onclick = () => {
+  currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+  showSlide(currentIndex);
+};
+document.querySelector(".next").onclick = () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+};
 
-function showPrev() {
-  currentIndex = (currentIndex - 1 + total) % total;
-  updateSlider();
-}
-
-document.querySelector('.next').addEventListener('click', showNext);
-document.querySelector('.prev').addEventListener('click', showPrev);
-
-// Automatický posun každých 5 sekund
-setInterval(showNext, 5000);
-
-// Modal image
-function openModal(src) {
-  const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modal-img");
-  modal.style.display = "block";
-  modalImg.src = src;
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
->>>>>>> d64cb15 (Přidán slider s automatickým posunem a galerií)
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}, 4000);
