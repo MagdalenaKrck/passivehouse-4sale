@@ -1,82 +1,161 @@
+<<<<<<< HEAD
+<!DOCTYPE html><html><head><title>Home</title></head><body><h1>Home Page</h1><a href='about.html'>About</a> | <a href='journey.html'>Journey</a> | <a href='certification.html'>Certification</a></body></html>
+=======
+
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moderní Pasivní Dům</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <title>Passive House Újezd</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slideshow 30s infinite;
+      z-index: -1;
+    }
+    @keyframes slideshow {
+      0% { background-image: url('placeholder1.jpg'); }
+      33% { background-image: url('placeholder2.jpg'); }
+      66% { background-image: url('placeholder3.jpg'); }
+    }
+    nav {
+      background-color: #ffffffcc;
+      backdrop-filter: blur(6px);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .lang-switch {
+      margin-left: auto;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    iframe {
+      border: none;
+    }
+  </style>
 </head>
 <body>
   <nav>
-    <ul>
-      <li><a href="index.html" id="nav-home">Domů</a></li>
-      <li><a href="about.html" id="nav-about">O domě</a></li>
-      <li><a href="certification.html" id="nav-cert">Certifikace</a></li>
-      <li><a href="garden.html" id="nav-garden">Zahrada</a></li>
-      <li><a href="contact.html" id="nav-contact">Kontakt</a></li>
-    </ul>
+    <div><strong>Passive House</strong></div>
+    <div>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#certification">Certification</a>
+      <a href="journey.html">The Journey of the House</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </div>
     <div class="lang-switch">
-      <select id="lang-switcher">
-        <option value="cz">CZ</option>
-        <option value="en">EN</option>
-        <option value="de">DE</option>
-      </select>
+      <a href="#" onclick="setLang('en')">EN</a> |
+      <a href="#" onclick="setLang('cz')">CZ</a> |
+      <a href="#" onclick="setLang('de')">DE</a>
     </div>
   </nav>
 
-  <section class="hero">
-    <img src="img/hero1.jpg" alt="Pasivní dům" />
-    <div class="hero-text">
-      <h1 id="hero-title">Moderní Pasivní Dům</h1>
-      <p id="hero-subtitle">Energeticky efektivní bydlení v harmonii s přírodou</p>
-      <a href="#features" class="cta">Zjistit více</a>
+  <header>
+    <div class="background"></div>
+    <section style="color: white; text-align: center; padding-top: 20vh;">
+      <h1 style="font-size: 2.8rem;">Certified Passive House – Sustainability, Comfort & Design</h1>
+      <p style="font-size: 1.8rem;">Újezd u Tišnova</p>
+    </section>
+  </header>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="placeholder1.jpg" alt="House front" onclick="openImage(this.src)" />
+      <img src="placeholder2.jpg" alt="Terrace" onclick="openImage(this.src)" />
+      <img src="placeholder3.jpg" alt="Garden" onclick="openImage(this.src)" />
     </div>
   </section>
 
-  <section class="features" id="features">
-    <div class="feature">
-      <img src="/icons/solar.svg" alt="Solární energie"/>
-      <h3>Solární Energie</h3>
-      <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
-    </div>
-    <div class="feature">
-      <img src="/icons/climate.svg" alt="Kontrolované klima"/>
-      <h3>Kontrolované Klima</h3>
-      <p>Rekuperace tepla a řízené větrání zajišťují ideální teplotu po celý rok.</p>
-    </div>
-    <div class="feature">
-      <img src="/icons/air.svg" alt="Čistý vzduch"/>
-      <h3>Čistý Vzduch</h3>
-      <p>Filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p>
-    </div>
-    <div class="feature">
-      <img src="/icons/a-plus.svg" alt="Energetická třída A+"/>
-      <h3>Energetická Třída A+</h3>
-      <p>Nejvyšší energetická třída s minimální spotřebou energie.</p>
-    </div>
-    <div class="feature">
-      <img src="/icons/money.svg" alt="Nízké náklady"/>
-      <h3>Nízké Náklady</h3>
-      <p>Úspora až 90% nákladů na vytápění a chlazení.</p>
-    </div>
-    <div class="feature">
-      <img src="/icons/smart.svg" alt="Smart Home"/>
-      <h3>Smart Home</h3>
-      <p>Inteligentní ovládání všech systémů přes mobilní aplikaci.</p>
-    </div>
+  <section id="about">
+    <h2>About the House</h2>
+    <p>Certified passive house, 170 m², solar panels, pool, stunning location. Designed for low energy consumption and natural harmony.</p>
   </section>
 
-  <section class="map-section">
-    <h2>Lokace</h2>
-    <div id="map"></div>
+  <section id="certification">
+    <h2>Passive House Certification</h2>
+    <p>The house is a certified passive house with minimal energy consumption, efficient heating and cooling, and smart ventilation with heat recovery.</p>
+  </section>
+
+  <section id="location">
+    <h2>Location</h2>
+    <p>Újezd u Tišnova, 20 km from Brno, CZ</p>
+    <iframe src="https://www.google.com/maps?q=49.3612119,16.3302675&output=embed" width="100%" height="300"></iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:magdalena.kreckova@gmail.com">magdalena.kreckova@gmail.com</a></p>
+    <p>We speak Czech & English. Viewings in person or online.</p>
   </section>
 
   <footer>
-    &copy; 2025 Moderní Pasivní Dům
+    &copy; 2025 Passive House Újezd
   </footer>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="js/script.js"></script>
+  <script>
+    function openImage(src) {
+      const imgWindow = window.open('', '_blank');
+      imgWindow.document.write('<img src="' + src + '" style="width:100%">');
+    }
+    function setLang(lang) {
+      alert("Language switching not implemented yet. You selected: " + lang);
+    }
+  </script>
 </body>
 </html>
+>>>>>>> c6357eceac746ad117f141d79679933b6cf788e2
