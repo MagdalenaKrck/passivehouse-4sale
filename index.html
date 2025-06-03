@@ -2,76 +2,70 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Moderní Pasivní Dům</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <ul>
-        <li><a href="#">Domů</a></li>
-        <li><a href="#">O domě</a></li>
-        <li><a href="#">Vlastnosti</a></li>
-        <li><a href="#">Kontakt</a></li>
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Domů</a></li>
+        <li><a href="about.html">O domě</a></li>
+        <li><a href="certifikace.html">Certifikace</a></li>
+        <li><a href="zahrada.html">Zahrada</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li>
+          <select id="lang-switcher">
+            <option value="cs">CZ</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+          </select>
+        </li>
       </ul>
-      <div class="language-switcher">
-        <a href="#">CZ</a> | <a href="#">EN</a> | <a href="#">DE</a>
-      </div>
     </nav>
     <div class="hero">
       <h1>Moderní Pasivní Dům</h1>
       <p>Energeticky efektivní bydlení v harmonii s přírodou</p>
-      <a href="#kontakt" class="cta-button">Zjistit více</a>
+      <a href="#features" class="cta-button">Zjistit více</a>
     </div>
   </header>
 
-  <section class="features">
-    <div class="feature">
-      <img src="icons/solar.svg" alt="">
-      <h3>Solární Energie</h3>
-      <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
-    </div>
-    <div class="feature">
-      <img src="icons/climate.svg" alt="">
-      <h3>Kontrolované Klima</h3>
-      <p>Rekuperace tepla a řízené větrání zajišťují ideální teplotu po celý rok.</p>
-    </div>
-    <div class="feature">
-      <img src="icons/air.svg" alt="">
-      <h3>Čistý Vzduch</h3>
-      <p>Systém filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p>
-    </div>
-    <div class="feature">
-      <img src="icons/a-plus.svg" alt="">
-      <h3>Energetická Třída A+</h3>
-      <p>Nejvyšší energetická třída s minimální spotřebou energie.</p>
-    </div>
-    <div class="feature">
-      <img src="icons/money.svg" alt="">
-      <h3>Nízké Provozní Náklady</h3>
-      <p>Úspora až 90 % nákladů na vytápění a chlazení.</p>
-    </div>
-    <div class="feature">
-      <img src="icons/smart.svg" alt="">
-      <h3>Smart Home</h3>
-      <p>Inteligentní ovládání všech systémů přes mobilní aplikaci.</p>
-    </div>
-  </section>
+  <main>
+    <section class="slider">
+      <button class="prev">&#10094;</button>
+      <div class="slides">
+        <img src="img/hero1.jpg" alt="Dům 1" />
+        <img src="img/hero2.jpg" alt="Dům 2" />
+        <img src="img/hero3.jpg" alt="Dům 3" />
+      </div>
+      <button class="next">&#10095;</button>
+    </section>
 
-  <section class="map">
-    <h2>Lokace</h2>
-    <iframe src="https://www.google.com/maps?q=49.3612119,16.3302675&output=embed"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
+    <section id="features">
+      <div class="feature">
+        <img src="icons/solar.svg" alt="Solární Energie" />
+        <h3>Solární Energie</h3>
+        <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
+      </div>
+      <div class="feature">
+        <img src="icons/climate.svg" alt="Kontrolované Klima" />
+        <h3>Kontrolované Klima</h3>
+        <p>Rekuperace a řízené větrání zajišťují ideální teplotu po celý rok.</p>
+      </div>
+      <div class="feature">
+        <img src="icons/air.svg" alt="Čistý Vzduch" />
+        <h3>Čistý Vzduch</h3>
+        <p>Filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p>
+      </div>
+    </section>
 
-  <section class="intro" id="kontakt">
-    <h2>O Domě</h2>
-    <p>Dům byl navržen s důrazem na soběstačnost, udržitelnost a pohodlí. Je ideální pro rodinu, která hledá moderní bydlení v přírodě s minimálními provozními náklady.</p>
-    <a href="kontakt.html" class="cta-button">Kontaktujte nás</a>
-  </section>
+    <section id="map">
+      <h2>Lokace</h2>
+      <iframe src="https://www.google.com/maps?q=49.3612119,16.3302675&hl=cs&z=15&output=embed" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
