@@ -1,16 +1,17 @@
 
-let index = 0;
-const slides = document.querySelector('.slides');
-const images = slides.querySelectorAll('img');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
+// Slider
+let idx=0;
+const slides=document.querySelector('.slider');
+const imgs=document.querySelectorAll('.slider img');
+function show(i){idx=(i+imgs.length)%imgs.length;slides.style.transform=`translateX(-${idx*100}%)`;}
+document.querySelector('.next').onclick=()=>show(idx+1);
+document.querySelector('.prev').onclick=()=>show(idx-1);
+setInterval(()=>show(idx+1),5000);
 
-function showSlide(i) {
-  index = (i + images.length) % images.length;
-  slides.style.transform = `translateX(-${index * 100}%)`;
+// Leaflet map
+function initMap(){
+  const map=L.map('map').setView([49.3612119,16.3302675],13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap'}).addTo(map);
+  L.marker([49.3612119,16.3302675]).addTo(map);
 }
-
-next.addEventListener('click', () => showSlide(index + 1));
-prev.addEventListener('click', () => showSlide(index - 1));
-
-setInterval(() => showSlide(index + 1), 5000);
+window.onload=initMap;

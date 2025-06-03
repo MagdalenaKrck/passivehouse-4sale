@@ -1,71 +1,67 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moderní Pasivní Dům</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Domů</a></li>
-        <li><a href="about.html">O domě</a></li>
-        <li><a href="certifikace.html">Certifikace</a></li>
-        <li><a href="zahrada.html">Zahrada</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li>
-          <select id="lang-switcher">
+    <!DOCTYPE html>
+    <html lang="cs">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Domů – Moderní Pasivní Dům</title>
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    </head>
+    <body>
+      <header class="header">
+        <nav class="navbar">
+          <div class="nav-left">
+            <a href="index.html" class="brand">Domů</a>
+            <a href="about.html">O domě</a>
+            <a href="certifikace.html">Certifikace</a>
+            <a href="zahrada.html">Zahrada</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+          <select id="lang-switch">
             <option value="cs">CZ</option>
             <option value="en">EN</option>
             <option value="de">DE</option>
           </select>
-        </li>
-      </ul>
-    </nav>
-    <div class="hero">
+        </nav>
+      </header>
+
+      <section class="hero-card">
+  <div class="hero-img">
+    <button class="slider-btn prev">&#10094;</button>
+    <div class="slider">
+      <img src="img/hero1.jpg" alt="Dům" />
+      <img src="img/hero2.jpg" alt="Dům 2" />
+      <img src="img/hero3.jpg" alt="Dům 3" />
+    </div>
+    <button class="slider-btn next">&#10095;</button>
+    <div class="hero-overlay">
       <h1>Moderní Pasivní Dům</h1>
       <p>Energeticky efektivní bydlení v harmonii s přírodou</p>
-      <a href="#features" class="cta-button">Zjistit více</a>
+      <a href="kontakt.html" class="cta">Zjistit více</a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section class="slider">
-      <button class="prev">&#10094;</button>
-      <div class="slides">
-        <img src="img/hero1.jpg" alt="Dům 1" />
-        <img src="img/hero2.jpg" alt="Dům 2" />
-        <img src="img/hero3.jpg" alt="Dům 3" />
-      </div>
-      <button class="next">&#10095;</button>
-    </section>
+<section class="features" id="features">
+  <div class="feature"><img src="icons/solar.svg"><h3>Solární Energie</h3><p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p></div>
+  <div class="feature"><img src="icons/climate.svg"><h3>Kontrolované Klima</h3><p>Rekuperace a řízené větrání zajišťují ideální teplotu po celý rok.</p></div>
+  <div class="feature"><img src="icons/air.svg"><h3>Čistý Vzduch</h3><p>Filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p></div>
+  <div class="feature"><img src="icons/a-plus.svg"><h3>Energetická Třída A+</h3><p>Nejvyšší energetická třída s minimální spotřebou energie.</p></div>
+  <div class="feature"><img src="icons/money.svg"><h3>Nízké Náklady</h3><p>Úspora až 90&nbsp;% nákladů na vytápění a chlazení.</p></div>
+  <div class="feature"><img src="icons/smart.svg"><h3>Smart Home</h3><p>Inteligentní ovládání všech systémů přes mobilní aplikaci.</p></div>
+</section>
 
-    <section id="features">
-      <div class="feature">
-        <img src="icons/solar.svg" alt="Solární Energie" />
-        <h3>Solární Energie</h3>
-        <p>Fotovoltaické panely pokrývají většinu energetických potřeb domácnosti.</p>
-      </div>
-      <div class="feature">
-        <img src="icons/climate.svg" alt="Kontrolované Klima" />
-        <h3>Kontrolované Klima</h3>
-        <p>Rekuperace a řízené větrání zajišťují ideální teplotu po celý rok.</p>
-      </div>
-      <div class="feature">
-        <img src="icons/air.svg" alt="Čistý Vzduch" />
-        <h3>Čistý Vzduch</h3>
-        <p>Filtrace vzduchu zajišťuje zdravé vnitřní prostředí.</p>
-      </div>
-    </section>
+<section class="map-section">
+  <h2>Lokace</h2>
+  <div id="map" style="height:400px;"></div>
+</section>
 
-    <section id="map">
-      <h2>Lokace</h2>
-      <iframe src="https://www.google.com/maps?q=49.3612119,16.3302675&hl=cs&z=15&output=embed" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-    </section>
-  </main>
 
-  <script src="js/script.js"></script>
-</body>
-</html>
+      <footer class="footer">
+        &copy; 2025 Moderní Pasivní Dům
+      </footer>
+
+      <script src="js/script.js"></script>
+    </body>
+    </html>
