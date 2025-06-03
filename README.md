@@ -37,3 +37,4 @@ Sustainable, energy-efficient, architect-designed home near Brno and Vienna.
 
 Interested in viewing or purchasing the home?  
 Contact Magdalena at: **info@passivehouse4sale.com**
+
